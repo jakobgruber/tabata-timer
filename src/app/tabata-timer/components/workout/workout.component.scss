@@ -10,6 +10,15 @@
   color: red;
 }
 
-.duration {
-  font-size: 150px;
+
+section {
+  > h1, > div {
+    text-align: center;
+  }
+
+  .duration {
+    font-size: 150px;
+    min-width: 200px;
+  }
 }
+

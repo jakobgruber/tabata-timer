@@ -26,6 +26,8 @@ export class WorkoutComponent implements OnInit, AfterViewInit {
       this.tabataItems.push(new WorkoutTabataItem(this.tabataTimerSettings.workout));
       this.tabataItems.push(new RestTabataItem(this.tabataTimerSettings.rest));
     }
+
+    this.currentTabataItem = this.tabataItems[0];
   }
 
   ngAfterViewInit() {

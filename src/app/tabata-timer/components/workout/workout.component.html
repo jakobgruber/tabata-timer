@@ -1,11 +1,9 @@
-<section *ngIf="currentTabataItem">
-  <div [class.start]="currentTabataItem.isStart()"
-       [class.workout]="currentTabataItem.isWorkout()"
-       [class.rest]="currentTabataItem.isRest()"
-  >
-    <h1>{{ currentTabataItem.label }}</h1>
-    <div class="duration">{{ currentTabataItem.duration}}</div>
-    <div>Round: {{ getRoundCount() }}</div>
-  </div>
+<section *ngIf="currentTabataItem"
+         [class.start]="currentTabataItem.isStart()"
+         [class.workout]="currentTabataItem.isWorkout()"
+         [class.rest]="currentTabataItem.isRest()">
+  <h1>{{ currentTabataItem.label }}</h1>
+  <div class="duration">{{ currentTabataItem.duration}}</div>
+  <div>Round: {{ getRoundCount() }}</div>
 </section>
 
