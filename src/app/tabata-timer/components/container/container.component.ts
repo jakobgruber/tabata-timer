@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {TabataTimerSettings} from '../../models/tabata-timer-settings';
+
+enum CurrentComponentType {
+  Start, Workout, Finish
+}
 
 @Component({
   selector: 'app-container',
@@ -7,9 +12,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContainerComponent implements OnInit {
 
-  constructor() { }
+  currentComponent = CurrentComponentType.Start;
+  CurrentComponentType = CurrentComponentType;
+  tabataTimerSettings = new TabataTimerSettings();
+
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  onStartWorkout() {
+    this.currentComponent = CurrentComponentType.Workout;
+  }
+
+  onFinishWorkout() {
+    this.currentComponent = CurrentComponentType.Finish;
+  }
+
+  onStartNewWorkout() {
+    this.currentComponent = CurrentComponentType.Start;
   }
 
 }

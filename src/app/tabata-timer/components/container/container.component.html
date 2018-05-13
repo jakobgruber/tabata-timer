@@ -1,3 +1,18 @@
-<p>
-  container works!
-</p>
+<mat-card class="tabataTimerContainer">
+
+  <mat-card-content>
+    <tt-start *ngIf="currentComponent === CurrentComponentType.Start"
+              [tabataTimerSettings]="tabataTimerSettings"
+              (startWorkout)="onStartWorkout()">
+    </tt-start>
+
+    <tt-workout *ngIf="currentComponent === CurrentComponentType.Workout"
+                [tabataTimerSettings]="tabataTimerSettings"
+                (finishWorkout)="onFinishWorkout()">
+    </tt-workout>
+
+    <tt-finish *ngIf="currentComponent === CurrentComponentType.Finish"
+                (startNewWorkout)="onStartNewWorkout()"></tt-finish>
+  </mat-card-content>
+
+</mat-card>

@@ -1,13 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {TabataTimerSettings} from '../../models/tabata-timer-settings';
 
 @Component({
-  selector: 'app-start',
+  selector: 'tt-start',
   templateUrl: './start.component.html',
   styleUrls: ['./start.component.scss']
 })
 export class StartComponent implements OnInit {
 
-  constructor() { }
+  @Input() tabataTimerSettings: TabataTimerSettings;
+  @Output() startWorkout = new EventEmitter<void>();
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

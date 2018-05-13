@@ -1,3 +1,23 @@
-<p>
-  start works!
-</p>
+<section>
+  <div>
+    <mat-form-field>
+      <input type="number" matInput placeholder="Rounds" [(ngModel)]="tabataTimerSettings.rounds" required #rounds="ngModel">
+      <mat-error *ngIf="rounds.invalid">Rounds is required</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <input type="number" matInput placeholder="Workout" [(ngModel)]="tabataTimerSettings.workout" required #workout="ngModel">
+      <mat-error *ngIf="workout.invalid">Workout is required</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <input type="number" matInput placeholder="Rest" [(ngModel)]="tabataTimerSettings.rest" required #rest="ngModel">
+      <mat-error *ngIf="rest.invalid">Rest is required</mat-error>
+    </mat-form-field>
+  </div>
+</section>
+<footer>
+  <button mat-raised-button (click)="startWorkout.emit()">Start</button>
+</footer>
