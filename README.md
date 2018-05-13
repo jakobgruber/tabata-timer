@@ -1,6 +1,7 @@
 # TabataTimer
 
 Simple app to help me at [high intensity interval training](https://en.wikipedia.org/wiki/High-intensity_interval_training)
+
 [demo](https://tabata-timer-f1a17.firebaseapp.com/)
 
 ## Development server
