@@ -6,7 +6,7 @@ enum CurrentComponentType {
 }
 
 @Component({
-  selector: 'app-container',
+  selector: 'tt-container',
   templateUrl: './container.component.html',
   styleUrls: ['./container.component.scss']
 })
