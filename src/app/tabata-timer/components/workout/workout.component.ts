@@ -24,7 +24,10 @@ export class WorkoutComponent implements OnInit, AfterViewInit {
 
     for (let i = 0; i < this.tabataTimerSettings.rounds; i++) {
       this.tabataItems.push(new WorkoutTabataItem(this.tabataTimerSettings.workout));
-      this.tabataItems.push(new RestTabataItem(this.tabataTimerSettings.rest));
+
+      if (i < this.tabataTimerSettings.rounds - 1) {
+        this.tabataItems.push(new RestTabataItem(this.tabataTimerSettings.rest));
+      }
     }
 
     this.currentTabataItem = this.tabataItems[0];
@@ -39,7 +42,7 @@ export class WorkoutComponent implements OnInit, AfterViewInit {
       return tabataItem.isRest();
     });
 
-    return this.tabataTimerSettings.rounds - restTabataItems.length + 1;
+    return this.tabataTimerSettings.rounds - restTabataItems.length;
   }
 
   private startNextTabataItem() {
