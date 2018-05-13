@@ -1,16 +1,18 @@
 import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
 import {ContainerComponent} from './components/container/container.component';
+import {StartComponent} from './components/start/start.component';
+import {WorkoutComponent} from './components/workout/workout.component';
+import {FinishComponent} from './components/finish/finish.component';
 
 const routes: Routes = [
   {
     path: '', component: ContainerComponent,
-    /*children: [
-      {path: 'person/detail/:id', component: PersonDetailComponent},
-      {path: 'person/edit/:id', component: PersonEditComponent},
-      {path: 'person/detail/:personId/debt/edit/:debtId', component: DebtEditComponent},
-      {path: '', component: PersonDetailComponent}
-    ]*/
+    children: [
+      {path: 'start', component: StartComponent},
+      {path: 'workout', component: WorkoutComponent},
+      {path: 'finish', component: FinishComponent}
+    ]
   }
 ];
 
