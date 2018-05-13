@@ -1,6 +1,6 @@
 # TabataTimer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
+Simple app to help me at [high intensity interval training] (https://en.wikipedia.org/wiki/High-intensity_interval_training)
 
 ## Development server
 
